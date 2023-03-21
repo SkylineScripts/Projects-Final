@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html>
+  <title>Projects</title>
+<link rel="stylesheet" type="text/css" href="stylesheet.css" />
+<meta charset="UTF-8" />
+
+<body>
+  <header class="header">
+    <p class="logo" id="LogoHeader">Projects</p>
+    <nav id="topnav">
+      <a href="#Projects" id="Do" class="tablinks" onclick="openTab(event, 'DefaultJs')">Overview</a>
+      <div class="dropdown">
+        <div class="margin">
+        <p class="List">Project-List</p>
+        </div>
+        <div class="dropdown-content">
+          <a href="#Projects/Factor" id="Page1" class="tablinks" onclick="openTab(event, 'FactorJs')">Factor</a>
+          <a href="#Projects/Range" id="Page2" class="tablinks" onclick="openTab(event, 'RangeJs')">Range</a>
+          <a href="#Projects/Counter" id="Page3" class="tablinks" onclick="openTab(event, 'CounterJs')">Counter</a>
+          <a href="#Projects/Test" id="Page4" class="tablinks" onclick="openTab(event, 'TestJs')">Test</a>         
+        </div>
+      </div>
+      <a href="#Search" id="search" class="tablinks" onclick="openTab(event, 'SearchJs')">Search</a> 
+    </nav>
+  </header>
+  <div id="DefaultJs" class="tabcontent">
+    <div class="container">
+      <div class="box">
+        <div class="content">
+          <nav class="navbar">
+            <div class="tab">
+              <a href="#Projects/Factor" id="Page1" class="tablinks" onclick="openTab(event, 'FactorJs')">Factor</a>
+            </div>
+          </nav>
+          <p class="Description"><span>Note:</span> Factor-Caculator does not work with irrational numbers.</p>
+        </div>
+      </div>
+    </div>
+    <div class="container" id="RangeBox">
+      <div class="box">
+        <div class="content">
+          <nav class="navbar">
+            <div class="tab">
+              <a href="#Projects/Range" id="Page2" class="tablinks" onclick="openTab(event, 'RangeJs')">Range</a>
+            </div>
+          </nav>
+          <p class="Description" id="RandomRange">Random number between set ranges;<br><br> Yes/No = Even/Odd respectively.</p>
+        </div>
+      </div>
+    </div>
+    <div class="container">
+      <div class="box">
+        <div class="content">
+          <nav class="navbar">
+            <div class="tab">
+            <a href="#Projects/Counter" id="Page3" class="tablinks" onclick="openTab(event, 'CounterJs')">Counter</a>
+          </div>
+          </nav>
+          <p class="Description"><span>Note:</span> Counter resets if page is refreshed.</p>
+        </div>
+      </div>
+    </div>
+    <div class="container">
+      <div class="box">
+        <div class="content">
+          <nav class="navbar">
+            <div class="tab">
+              <a href="#Projects/Test" id="Page4" class="tablinks" onclick="openTab(event, 'TestJs')">Test</a>
+            </div>
+          </nav>
+          <p class="Description">Work in progress.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div id="SearchJs" class="tabcontent">
+    <input autocomplete="off" value="" id="SearchContent" placeholder="Search Projects" />
+    <button id="Submit" onclick="SearchKey()">Enter</button>
+    </div>
+
+  <div id="FactorJs" class="tabcontent">
+    <div id="factor">
+      <div class="backgroundframe">
+      <input value="" id="bottom" placeholder="Bottom Number" />
+      <input value="" id="top" placeholder="Top Number" />
+      <input value="" id="i" placeholder="i = ; y = ;" />
+      <button id="function" onclick="ab()">Compute</button>
+      <button id="clear" onclick="Clear()">Clear All</button>
+      </div>
+    </div>
+  </div>
+
+  <div id="RangeJs" class="tabcontent">
+    <div id="range">
+      <input value="" id="range1" placeholder="Range 1" />
+      <input value="" id="range2" placeholder="Range 2" />
+      <input value="" id="result" placeholder="Result" />
+      <button id="Ranges" onclick="Range()">Generate</button>
+      <button id="allclear" onclick="ClearRange()">Clear All</button>
+    </div>
+  </div>
+
+  <div id="CounterJs" class="tabcontent">
+    <div id="Counter">
+      <span id="value">0</span>
+      <button class="btn increase">Increase</button>
+      <button class="btn reset">Reset</button>
+      <button class="btn decrease">Decrease</button>
+      <button class="btn interval" id="Autoclick">Autoclick</button>
+      <p class="TC">Total Clicks: <span id="total">0</span></p>
+    </div>
+  </div>
+  <div id="TestJs" class="tabcontent">
+    <button onclick="myFunction()">Disable</button>
+
+    <div class="boxes">
+      <input type="text" class="l Box R1C1" id="Disable0">
+      <input type="text" class="l Box R1C2" id="Disable1">
+      <input type="text" class="l Box R1C3" id="Disable2">
+      <input type="text" class="l Box R1C4" id="Disable3">
+      <input type="text" class="l Box R1C5 Enter0" id="Disable4"> <br><br>
+      <input type="text" class="l Box-R2C1">
+      <input type="text" class="l Box R2C2">
+      <input type="text" class="l Box R2C3">
+      <input type="text" class="l Box R2C4">
+      <input type="text" class="l Box R2C5 Enter1"> <br><br>
+      <input type="text" class="l Box-R3C1">
+      <input type="text" class="l Box R3C2">
+      <input type="text" class="l Box R3C3">
+      <input type="text" class="l Box R3C4">
+      <input type="text" class="l Box R3C5"> <br><br>
+      <input type="text" class="l Box-R4C1">
+      <input type="text" class="l Box R4C2">
+      <input type="text" class="l Box R4C3">
+      <input type="text" class="l Box R4C4">
+      <input type="text" class="l Box R4C5"> <br><br>
+      <input type="text" class="l Box-R5C1">
+      <input type="text" class="l Box R5C2">
+      <input type="text" class="l Box R5C3">
+      <input type="text" class="l Box R5C4">
+      <input type="text" class="l Box R5C5"> <br><br>
+      <input type="text" class="l Box-R6C1">
+      <input type="text" class="l Box R6C2">
+      <input type="text" class="l Box R6C3">
+      <input type="text" class="l Box R6C4">
+      <input type="text" class="l Box R6C5"> <br><br>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+
+</body>
+
+</html>
