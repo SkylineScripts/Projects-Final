@@ -1,12 +1,12 @@
 <!DOCTYPE html>
 <html>
   <title>Projects</title>
-<link rel="stylesheet" type="text/css" href="stylesheet.css" />
+<link rel="stylesheet" type="text/css" href="style.css" />
 <meta charset="UTF-8" />
 
 <body>
   <header class="header">
-    <p class="logo" id="LogoHeader">Projects</p>
+    <h1 class="logo" id="LogoHeader">Projects</h1>
     <nav id="topnav">
       <a href="#Projects" id="Do" class="tablinks" onclick="openTab(event, 'DefaultJs')">Overview</a>
       <div class="dropdown">
@@ -23,6 +23,7 @@
       <a href="#Search" id="search" class="tablinks" onclick="openTab(event, 'SearchJs')">Search</a> 
     </nav>
   </header>
+<div id="OverviewFrame">
   <div id="DefaultJs" class="tabcontent">
     <div class="container">
       <div class="box">
@@ -48,7 +49,7 @@
         </div>
       </div>
     </div>
-    <div class="container">
+    <div class="container" id="CounterBox">
       <div class="box">
         <div class="content">
           <nav class="navbar">
@@ -60,7 +61,7 @@
         </div>
       </div>
     </div>
-    <div class="container">
+    <div class="container" id="TestBox">
       <div class="box">
         <div class="content">
           <nav class="navbar">
@@ -94,7 +95,7 @@
     <div id="range">
       <input value="" id="range1" placeholder="Range 1" />
       <input value="" id="range2" placeholder="Range 2" />
-      <input value="" id="result" placeholder="Result" />
+      <input value="" id="result" placeholder="Result" disabled />
       <button id="Ranges" onclick="Range()">Generate</button>
       <button id="allclear" onclick="ClearRange()">Clear All</button>
     </div>
@@ -148,7 +149,6 @@
   </div>
 
   <script src="script.js"></script>
-
 </body>
 
 </html>
